@@ -1,0 +1,1480 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+% Added by lyx2lyx
+%% This document must be processed with xelatex!
+%\usepackage{fontspec}
+%\setmainfont[Mapping=tex-text]{Arial}
+%\setsansfont[Mapping=tex-text]{Arial}
+%\setmonofont{Arial}
+%\usepackage{xunicode}
+%\usepackage{xltxtra}
+%cabecera y pie
+
+\usepackage{fontenc}
+\usepackage{helvet}
+%\setmainfont{Arial}
+%\renewcommand*{\familydefault}{\sfdefaut}
+
+\usepackage{fancyhdr} %activamos el paquete
+
+\pagestyle{fancy} %seleccionamos un estilo
+
+%\lhead{TEXTO} %texto izquierda de la cabecera
+
+%\chead{TEXTO} %texto centro de la cabecera
+
+\rhead{ } %número de página a la derecha
+
+%\lfoot{TEXTO} %texto izquierda del pie
+
+%\cfoot{\includegraphics[width=11cm]{heado2}} %imagen centro del pie
+
+%\rfoot{TEXTO} %texto derecha del pie
+
+%\renewcommand{\headrulewidth}{0.4pt} % grosor de la línea de la cabecera
+
+%\renewcommand{\footrulewidth}{0.4pt} %grosor de la línea del pie
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans helvet
+\font_typewriter default
+\font_math auto
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 3.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 0cm
+\headsep 2cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 5
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle headings
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\paragraph_spacing single
+
+\family roman
+\size larger
+\color black
+IMPLEMENTACIÓN DE LA ESTRATEGIA BPM A LOS SERVICIOS BRINDADOS POR LA DIRECCIÓN
+ ADMINISTRATIVA DEL MINISTERIO DE HACIENDA
+\end_layout
+
+\begin_layout Author
+\paragraph_spacing other -1
+
+\series bold
+\size large
+GUSTAVO ELOY ALCARAZ BOGADO
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Tutor: 
+\series default
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+\size small
+Tesis Presentada a la Facultad de estrategia Informática y Ciencias 
+\begin_inset Newline newline
+\end_inset
+
+Exactas (FATICE) de la Universidad Tecnológica Intercontinental 
+\begin_inset Newline newline
+\end_inset
+
+(UTIC) como requisito para obtener el Título de Ingeniero 
+\begin_inset Newline newline
+\end_inset
+
+en Sistemas Informáticos
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+\paragraph_spacing single
+
+\series bold
+\size normal
+ASUNCIÓN - Paraguay
+\begin_inset Newline newline
+\end_inset
+
+XXXX - 2015
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{Roman} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Derecho del autor
+\end_layout
+
+\begin_layout Standard
+Quien suscribe Gustavo Eloy Alcaraz Bogado, con Documento de Identidad Nº
+ 2.351.696, autor del trabajo de investigación titulado “Implementación de
+ la Estrategia BPM a los servicios brindados por la Dirección Administrativa
+ del Ministerio de Hacienda en el año 2.015” declara que voluntariamente
+ cede a título gratuito y en forma pura y simple, ilimitada e irrevocablemente
+ a favor de la Universidad Tecnológica Intercontinental el derecho de autor
+ de contenido patrimonial que como autor le corresponde sobre el trabajo
+ de referencia.
+ Conforme a lo anteriormente expresado, esta cesión otorga a la UTIC la
+ facultad de comunicar la obra, divulgarla, publicarla y reproducirlas en
+ soporte analógicos o digitales en al oportunidad que ella así lo estime
+ conveniente.
+ La UTIC deberá indicar que la autoría o creación del trabajo corresponde
+ a mi persona y habrá referencia al tutor y a las personas que hayan colaborado
+ en la realización del presente trabajo de investigación.
+ 
+\end_layout
+
+\begin_layout Standard
+En la ciudad de Asunción, a los días XX del mes de XXXXX de 2.014.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-----------------------------------------------------------
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gustavo Eloy Alcaraz Bogado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C.I.
+ 2.351.696
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Página de derecho de autor} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+markboth{Página de derecho de autor}{Página de derecho de autor} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Constancia del tutor
+\end_layout
+
+\begin_layout Standard
+Quien suscribe XXXXXXXX, con Documento de Identidad Nº..........................., Tutor del trabajo
+ de Investigación titulado implementación de la Estrategia BPM a los de
+ servicios brindados por la Dirección Administrativa del Ministerio de Hacienda
+ en el año 2.015, elaborado por el alumno Gustavo Eloy Alcaraz Bogado para
+ obtener el Título de Ingeniero en Sistemas Informáticos hace constar que
+ dicho trabajo reúne los requisitos exigidos por la Facultad de Ingeniería
+ en Informática de la Universidad Tecnológica Intercontinental y puede ser
+ sometido a evaluación y presentarse ante los docentes que fueren designados
+ para integrar la Mesa Examinadora.
+\end_layout
+
+\begin_layout Standard
+En la ciudad de Asunción, a los días XX del mes de XXXXX de 2.015.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\noun on
+-----------------------------------------
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prof.
+ XXXXXXXX
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\noun on
+C.I.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Constancia del tutor} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+markboth{Constancia del tutor}{Constancia del tutor} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Dedicatoria
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Dedicatoria} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+markboth{Dedicatoria}{Dedicatoria}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Agradecimientos
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Agradecimientos} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+markboth{Agradecimientos}{Agradecimientos} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Resumen
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Resumen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+markboth{Resumen}{Resumen}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Summary
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Summary}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+markboth{Summary}{Summary}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+cleardoublepage 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Índice general}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Índice de figuras}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listoffigures 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+cleardoublepage 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Índice de cuadros}  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listoftables
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+MARCO INTRODUCTORIO
+\end_layout
+
+\begin_layout Section*
+Introducción
+\end_layout
+
+\begin_layout Standard
+La Gestión de Procesos de Negocio o BPM, es el conjunto de técnicas y herramient
+as que permiten a las organizaciones modelar, automatizar, controlar, medir
+ y optimizar sus procesos de negocio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+CAPÍTULO I - EL PROBLEMA
+\end_layout
+
+\begin_layout Section
+Planteamiento del problema
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Subsection
+Formulación del Problema
+\end_layout
+
+\begin_layout Standard
+¿La Implementación de la estrategia BPM brindará una optimización a los
+ servicios de la Dirección Administrativa del Ministerio de Hacienda?
+\end_layout
+
+\begin_layout Section
+Objetivos de la investigación
+\end_layout
+
+\begin_layout Subsection
+General
+\end_layout
+
+\begin_layout Standard
+Implementar la estrategia BPM a los servicios brindados por la Dirección
+ Administrativa del Ministerio de Hacienda.
+\end_layout
+
+\begin_layout Subsection
+Específicos
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\begin_layout Section
+Justificación de la investigación
+\end_layout
+
+\begin_layout Standard
+La seguridad es una parte fundamental en las redes de computadoras, principalmen
+te en las redes inalámbricas, ya que por la naturaleza del medio de transmisión
+ que utilizan (frecuencia de radio, RF) es muy vulnerable a los diferentes
+ tipos de ataques de seguridad que existen.
+ 
+\end_layout
+
+\begin_layout Standard
+Por ello es indispensable contar con una red que deje atrás el uso del cableado,
+ para darle paso al sistema más moderno, rápido y efectivo que le den la
+ tan ansiada solución a todos sus problemas.
+\end_layout
+
+\begin_layout Section
+Viabilidad de la investigación
+\end_layout
+
+\begin_layout Part
+MARCO TEÓRICO
+\end_layout
+
+\begin_layout Chapter
+CAPÍTULO II - MARCO TEÓRICO
+\end_layout
+
+\begin_layout Section
+Bases teóricas
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Section
+
+\series bold
+Conceptos Básicos
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Oscar Antonio Gerometta, 
+\begin_inset Quotes eld
+\end_inset
+
+Introducción a las Redes Wireless LAN
+\begin_inset Quotes erd
+\end_inset
+
+ Versión 2.0 Pag.
+ 41
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Section
+Aspectos Legales
+\end_layout
+
+\begin_layout Standard
+LEY 4679/2012 (Procedimientos Públicos Admiinstrativos).
+\end_layout
+
+\begin_layout Standard
+Decreto 962 del 27 de noviembre de 2008 (MECIP).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Operacionalización de la variable
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Variable
+\end_layout
+
+\begin_layout Standard
+Implementación de la estrategia BPM para la optimización de los servicios
+ brindados por la Dirección Administrativa del Ministerio de Hacienda.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Dimensión
+\end_layout
+
+\begin_layout Standard
+1.
+ Objetivo específico 1.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Indicadores
+\end_layout
+
+\begin_layout Standard
+producto
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="block" valignment="middle" width="4cm">
+<column alignment="block" valignment="middle" width="4cm">
+<column alignment="center" valignment="middle" width="6cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Variable
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Dimensiones
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Indicadores
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Implementación de la Tecnoloía BPM para la optmización de los servicios
+ brindados por la Dirección Administrativa del Ministerio de Hacienda.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Description
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+2.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Description
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+3.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Description
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+4.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Operacionalización de la variable
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+MARCO METODOLÓGICO
+\end_layout
+
+\begin_layout Chapter
+CAPÍTULO III - MARCO METODOLÓGICO
+\end_layout
+
+\begin_layout Section
+Enfoque de la investigación
+\end_layout
+
+\begin_layout Standard
+\noindent
+Este trabajo recurre al enfoque Tecnológico la cual es la actividad que,
+ a través de la aplicación del método científico, está encaminada a descubrir
+ nuevos conocimientos (investigación básica), a la que posteriormente se
+ le buscan aplicaciones prácticas (investigación aplicada) para el diseño
+ o mejoramiento de un producto, proceso industrial o maquinaria y equipo.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+En las ciencias de la ingeniería presenta una serie de características que
+ la vinculan en forma natural con la innovación tecnológica, lo cual indica
+ que las instancias de promoción inicial de los proyectos de investigación
+ y la evaluación de la investigación tecnológica pueden ser utilizadas como
+ un instrumento para fomentar la innovación.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Carmona De La Cruz, Yojan Hernán, 2011.
+ Investigación Tecnológica.
+ Cajamarca Peru.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Técnicas o estrategias
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+La Dirección Administrativa se encuentra en el edificio central del Ministerio
+ de Hacienda ubicado en el microcentro de la ciudad de Asunción sobre la
+ calle Chile entre Palma y Pdte.
+ Franco, el edificio se compone de planta baja, entre pisos, el primer y
+ segundo piso, tiene básicamente oficinas administrativas y de servicios
+ a las demás dependencias que componen la entidad, para este trabajo solo
+ se tendrá en cuenta la planta baja del edificio, abarcando los departamentos
+ que componen las Coordinaciones de Obligaciones Diversas del Estado (C.O.D.E.)
+ - Dpto.
+ Análisis e Informes y el Dpto.
+ Procesos y Transferencias, Coordinación de Recursos Administrativos (C.R.A.)
+ - Dpto.
+ Servicios Generales y el Dpto.
+ Informática, Coordinación de Unidad Operativa de Contrataciones (C.U.O.C.)
+ - Dpto.
+ Planificación y Contratos, Dpto.
+ Procesos y el Dpto.
+ Monitoreo de Contratos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imagenes/organigrama.jpg
+	scale 53
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Organigrama del Área de Implementación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Etapa 1: Diagnóstico ¿Cómo es mi proceso actual?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Etapa 2: ¿cuáles son mis oportunidades de mejora?
+\end_layout
+
+\begin_layout Standard
+Etapa 3: Diseño
+\end_layout
+
+\begin_layout Standard
+Etapa 4: Desarrollo (sistemas / manuales / capacitaciones)
+\end_layout
+
+\begin_layout Standard
+Etapa 5: Implementación (comunicación / gestión del cambio)
+\end_layout
+
+\begin_layout Standard
+Etapa 6: Evaluación
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Part
+DESCRIPCION DEL PROCEDIMIENTO Y RESULTADO DE LA IMPLEMENTACION DEL SISTEMA
+\end_layout
+
+\begin_layout Chapter
+CAPÍTULO IV - DESCRIPCION DEL PROCEDIMIENTO Y RESULTADO DE LA IMPLEMENTACION
+ DEL SISTEMA
+\end_layout
+
+\begin_layout Section
+Exposición del análisis de los resultados
+\end_layout
+
+\begin_layout Section
+Interpretación o discusión de los resultados
+\end_layout
+
+\begin_layout Part
+DESARROLLO DE LA INVESTIGACIÓN
+\end_layout
+
+\begin_layout Chapter
+CAPÍTULO V - DESARROLLO
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Part
+CONCLUSIONES Y RECOMENDACIONES
+\end_layout
+
+\begin_layout Chapter
+CAPÍTULO VI - CONCLUSIONES Y RECOMENDACIONES
+\end_layout
+
+\begin_layout Section
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+En base a un estudio, revisión y análisis de la topología de red, se rediseño
+ y estandarizo la red inalámbrica con los equipos necesarios para el funcionamie
+nto del mismo.
+ 
+\end_layout
+
+\begin_layout Standard
+Se comprobó que con la implementación de la seguridad combinada de capa
+ 2 y capa 3 en el WLC para el manejo de autenticación mejoran la seguridad
+ de la red inalámbrica con un sistema de control de acceso robusto.
+\end_layout
+
+\begin_layout Standard
+Se demostró con la ayuda de software adecuado de monitoreo, medición de
+ señal y técnicas de red, que se puede optimizar el uso de los recursos
+ y la disponibilidad de la conectividad.
+\end_layout
+
+\begin_layout Standard
+Se diseñó una solución teniendo en cuenta la utilización de equipos de alta
+ calidad de la marca Cisco con altos estándares y un desempeño excelente.
+ 
+\end_layout
+
+\begin_layout Standard
+La correcta administración de estos equipos hizo posible cubrir un área
+ de cobertura extensa con roaming y niveles satisfactorios de transmisión.
+\end_layout
+
+\begin_layout Standard
+Se crean usuarios y se configurarán distintas VLANs para asociar a distintos
+ SSID, así logramos la segmentación de la red en distintas WLAN con varios
+ perfiles de red y privilegios de acceso para una mejor administración.
+ Para finalizar, un adecuado diseño de redes inalámbricas, la centralización
+ de la administración basada en el estándar 802.11n y la utilización del
+ WLC de Cisco a través de una única plataforma, se ofrece una solución que
+ se adecua para el cumplimiento del objetivo principal de esta tesis.
+\end_layout
+
+\begin_layout Section
+Recomendaciones
+\end_layout
+
+\begin_layout Standard
+\noindent
+Para asegurar una adecuada administración de toda la red se requiere estandariza
+r ciertas tareas: 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Monitorear de manera continua el estado de la red.
+ Mantener actualizado el software de los equipos de networking.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Investigar nuevas estrategias emergentes y su aplicabilidad.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si el número de usuarios va en crecimiento en relación al planteamiento
+ real de esta tesis, se implemente un directorio activo en una base de datos
+ externa al WLC.
+ Esto ayudara a mejorar los tiempos de respuestas de las peticiones de autentica
+ción en la LAN.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Se recomienda como segunda etapa de esta tesis el diseño de una Red de Malla
+ inalámbrica para el acceso a una red redundante y tolerante a fallas.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Se recomienda estudiar el nuevo estándar 802.11ac como extensión de este
+ proyecto (802.11n) y su aplicabilidad futura ya que las tasas de transferencia
+ pueden llegar hasta los 7 Gbps.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Este Sistema ofrece también el soporte y la ventaja de incorporar servicios
+ adicionales de red como la implementación futura de VOIP sobre wireless.
+\end_layout
+
+\begin_layout Addchap
+BIBLIOGRAFÍA
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Libros
+\end_layout
+
+\begin_layout Itemize
+SAMPIERI, Roberto Hernández.
+ 1991.
+ Metodología de la investigación.
+ México.
+ McGraw-HiII.
+ 1ra.
+ Edición.
+\end_layout
+
+\begin_layout Itemize
+SAMPIERI, Roberto Hernández.
+ 2006.
+ Metodología de la investigación.
+ México.
+ McGraw-HiII.
+ 4ta.
+ Edición.
+\end_layout
+
+\begin_layout Itemize
+SEQUEIRA, Anthony.
+ 2008.
+ CCNA Security Quick Reference.
+ Indianapolis.
+ Cisco Press.
+ 
+\end_layout
+
+\begin_layout Itemize
+BRANDON, James Carroll.
+ 2009.
+ CCNA Official Exam Certification Guide.
+ Indianapolis.
+ Cisco Press.
+\end_layout
+
+\begin_layout Itemize
+Cisco System, Inc., 2010.
+ Cisco Wireless Control System Configuration Guide.
+ California.
+ Cisco System Inc.
+ 
+\end_layout
+
+\begin_layout Itemize
+SMITH, WOODHAMS, MARG, Jeff, Jake, Robert, 2011.
+ Cisco Wireless Controller Based Wireless LAN Fundamental.
+ Indianapolis.
+ Cisco Press.
+ 
+\end_layout
+
+\begin_layout Itemize
+SMITH, WOODHAMS, MARG, Jeff, Jake, Robert, 2011.
+ Cisco Wireless Controller Based Wireless LAN Fundamental.
+ Indianapolis.
+ Cisco Press.
+\end_layout
+
+\begin_layout Itemize
+GEROMETTA, Oscar Antonio, 2012.
+ Introducción a las Redes Wireless LAN.
+ Buenos Aires.
+\end_layout
+
+\begin_layout Itemize
+JEROME, Henry.
+ 2012.
+ CCNA Wireless Quick Reference.
+ Indianapolis.
+ Cisco Press.
+ 
+\end_layout
+
+\begin_layout Itemize
+Carmona De La Cruz, Yojan Hernán, 2011.
+ Investigación Tecnológica.Cajamarca Peru.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Web Site
+\end_layout
+
+\begin_layout Itemize
+http://es.wikipedia.org/wiki/Pre-shared_key.
+\end_layout
+
+\begin_layout Itemize
+http://es.wikipedia.org/wiki/Advanced_Encryption_Standard.
+\end_layout
+
+\begin_layout Itemize
+http://es.wikipedia.org/wiki/Wired_Equivalent_Privacy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "none"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Addchap
+ANEXOS
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\end_body
+\end_document
